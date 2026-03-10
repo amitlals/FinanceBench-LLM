@@ -1,0 +1,39 @@
+# ==============================================================================
+# FinanceBench-LLM — Full Project Requirements
+# ==============================================================================
+
+# ── NVIDIA Ecosystem (for notebooks) ─────────────────────────────────────────
+# NIM inference (OpenAI-compatible API client)
+requests>=2.31.0
+
+# NeMo Framework (for Customizer and Evaluator)
+# Install from NVIDIA: pip install nemo_toolkit[all]
+# Or use the DLI course lab environment which has these pre-installed.
+# nemo_toolkit[all]>=1.23.0
+
+# MLflow for experiment tracking
+mlflow>=2.10.0
+
+# ── Hugging Face Ecosystem ───────────────────────────────────────────────────
+transformers>=4.40.0
+datasets>=2.18.0
+peft>=0.10.0
+huggingface-hub>=0.20.0
+accelerate>=0.27.0
+
+# ── Data Science & Visualization ─────────────────────────────────────────────
+numpy>=1.24.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# ── Jupyter ──────────────────────────────────────────────────────────────────
+jupyter>=1.0.0
+ipywidgets>=8.0.0
+
+# ── Demo (Gradio on HF Spaces) ──────────────────────────────────────────────
+gradio>=4.0.0
+
+# ── Optional: For local GPU training (LoRA fine-tuning) ─────────────────────
+# torch>=2.0.0  # Install separately for your CUDA version
+# bitsandbytes>=0.43.0  # For 4-bit quantization

@@ -1,0 +1,65 @@
+# FinanceBench-LLM — Centralized Configuration
+# All hyperparameters, model names, and API settings in one place.
+
+# ── Model Configuration ──────────────────────────────────────────────────────
+model:
+  base: "meta/llama-3.1-8b-instruct"          # NIM model ID for inference
+  judge: "meta/llama-3.1-70b-instruct"         # Larger model for LLM-as-a-Judge
+  hf_base: "meta-llama/Llama-3.1-8B-Instruct"  # HuggingFace model ID
+
+# ── NVIDIA NIM Configuration ─────────────────────────────────────────────────
+nim:
+  base_url: "https://integrate.api.nvidia.com/v1"
+  max_retries: 3
+  retry_delay: 2           # seconds between retries
+  rate_limit_delay: 0.5    # seconds between batch queries
+  temperature: 0.1
+  max_tokens: 512
+  top_p: 0.9
+
+# ── LoRA Fine-tuning Configuration ───────────────────────────────────────────
+lora:
+  rank: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules:
+    - "q_proj"
+    - "v_proj"
+    - "k_proj"
+    - "o_proj"
+  bias: "none"
+  task_type: "CAUSAL_LM"
+
+# ── Training Configuration ───────────────────────────────────────────────────
+training:
+  epochs: 2
+  batch_size: 4
+  learning_rate: 0.0002    # 2e-4
+  max_seq_length: 1024
+  warmup_steps: 10
+  weight_decay: 0.01
+  gradient_accumulation_steps: 4
+
+# ── Evaluation Configuration ─────────────────────────────────────────────────
+evaluation:
+  seed: 42
+  train_split: 0.8
+  criteria:
+    - "correctness"
+    - "faithfulness"
+    - "conciseness"
+  elo:
+    k_factor: 32.0
+    initial_rating: 1000.0
+    num_comparisons: 1000
+
+# ── Dataset Configuration ────────────────────────────────────────────────────
+dataset:
+  name: "PatronusAI/financebench"
+  description: "150+ financial QA pairs from SEC 10-K/10-Q filings"
+
+# ── Paths ────────────────────────────────────────────────────────────────────
+paths:
+  results: "results"
+  exported_models: "exported_models/lora_adapter"
+  mlflow_db: "sqlite:///mlflow.db"

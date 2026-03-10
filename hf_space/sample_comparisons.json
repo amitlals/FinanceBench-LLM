@@ -1,0 +1,27 @@
+{
+    "What was Apple's total revenue for fiscal year 2023?": {
+        "base": "Apple's total revenue for fiscal year 2023 was approximately $383 billion. The company reported net sales across its various product categories including iPhone, Mac, iPad, Wearables, and Services.",
+        "icl": "Apple reported total net revenue of $383.3 billion for fiscal year 2023 (ended September 30, 2023), as disclosed in its Form 10-K filed with the SEC. This represents a year-over-year decline of approximately 2.8% from $394.3 billion in FY2022.",
+        "lora": "According to Apple's FY2023 10-K filing, total net revenue was $383.285 billion for the fiscal year ended September 30, 2023. This was a decrease of 2.8% compared to FY2022 revenue of $394.328 billion."
+    },
+    "What was Microsoft's operating income margin in Q4 2023?": {
+        "base": "Microsoft's operating income margin in Q4 2023 was strong, reflecting the company's cloud business growth and operational efficiency improvements across its business segments.",
+        "icl": "Microsoft reported an operating income margin of approximately 43% in Q4 FY2023 (quarter ended June 30, 2023). Operating income was $24.3 billion on revenue of $56.2 billion, driven primarily by growth in Intelligent Cloud (Azure).",
+        "lora": "Microsoft's operating income margin for Q4 FY2023 (ended June 30, 2023) was 43.2%. Operating income reached $24.254 billion on total revenue of $56.189 billion. The Intelligent Cloud segment contributed the largest share of operating income."
+    },
+    "How did Amazon's AWS revenue change year-over-year in 2023?": {
+        "base": "Amazon Web Services (AWS) continued to grow in 2023, maintaining its position as the leading cloud infrastructure provider. Revenue showed positive year-over-year growth despite macroeconomic headwinds.",
+        "icl": "AWS revenue grew approximately 13% year-over-year in 2023, reaching $90.8 billion compared to $80.1 billion in 2022. Growth accelerated through the year, with Q4 2023 showing approximately 13% YoY growth as enterprises resumed cloud migration projects.",
+        "lora": "AWS revenue for full-year 2023 was $90.757 billion, representing 13.3% year-over-year growth from $80.096 billion in 2022. Growth re-accelerated in H2 2023, with Q4 posting 13.2% YoY growth ($24.2B vs $21.4B)."
+    },
+    "What was Tesla's gross profit margin for the automotive segment?": {
+        "base": "Tesla's automotive gross profit margin has been a closely watched metric. The company experienced some pressure on margins in 2023 due to price reductions across its vehicle lineup to stimulate demand.",
+        "icl": "Tesla's automotive gross margin was approximately 18.2% for full-year 2023, a significant decline from 26.2% in 2022. The decrease was primarily driven by multiple price reductions across the Model 3, Model Y, Model S, and Model X lineup to maintain sales volume.",
+        "lora": "Tesla reported an automotive gross margin of 18.2% for FY2023, down from 26.2% in FY2022 — a decline of 800 basis points. The margin compression was driven by aggressive price cuts (avg. 25% reduction across lineup) to defend market share amid increasing EV competition."
+    },
+    "What percentage of Alphabet's revenue came from advertising in 2023?": {
+        "base": "Advertising remains Alphabet's primary revenue source, generating the vast majority of the company's total revenue through Google Search, YouTube, and Google Network advertising products.",
+        "icl": "Approximately 77% of Alphabet's total revenue in 2023 came from advertising. Google advertising revenue was $237.9 billion out of total revenue of $307.4 billion. This includes Google Search ($175.0B), YouTube ads ($31.5B), and Google Network ($31.3B).",
+        "lora": "Advertising accounted for 77.4% of Alphabet's 2023 revenue. Total advertising revenue was $237.855 billion out of $307.394 billion total revenue. Breakdown: Google Search & other ($175.033B, 56.9%), YouTube ads ($31.510B, 10.3%), Google Network ($31.312B, 10.2%)."
+    }
+}
