@@ -1,7 +1,7 @@
 # FinanceBench-LLM — Hugging Face Spaces Requirements
 # These are the ONLY dependencies needed for the free CPU demo.
 
-gradio>=4.0.0
+gradio>=5.0.0
 huggingface-hub>=0.20.0
 
 # For local PEFT inference (if using GPU Space):
