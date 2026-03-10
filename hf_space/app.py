@@ -156,13 +156,17 @@ Answer concisely and accurately:"""
             from huggingface_hub import InferenceClient
 
             client = InferenceClient(token=os.environ.get("HF_TOKEN"))
-            response = client.text_generation(
-                prompt,
+            messages = [
+                {"role": "system", "content": "You are a precise financial analyst specializing in SEC filings. Answer questions accurately and concisely based on the provided context."},
+                {"role": "user", "content": f"{f'Context: {context}' if context else ''}\nQuestion: {question}\n\nAnswer concisely and accurately:"},
+            ]
+            response = client.chat_completion(
+                messages=messages,
                 model=BASE_MODEL_ID,
-                max_new_tokens=256,
+                max_tokens=256,
                 temperature=0.1,
             )
-            return response.strip()
+            return response.choices[0].message.content.strip()
         except Exception as e:
             return f"HF Inference API error: {e}. Please set HF_TOKEN environment variable."
 
